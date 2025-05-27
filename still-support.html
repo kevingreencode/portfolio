@@ -76,6 +76,22 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Back to portfolio link */
+        .back-link {
+            margin-left: auto;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
         /* Main Container */
         .container {
             max-width: 600px;
@@ -392,6 +408,10 @@
             .modal-content {
                 padding: 1.5rem;
             }
+
+            .back-link {
+                font-size: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -400,6 +420,9 @@
         <div class="header-content">
             <div class="app-icon">💧</div>
             <h1>Still Support</h1>
+            <a href="index.html" class="back-link">
+                <span>←</span> Back to Portfolio
+            </a>
         </div>
     </header>
 
@@ -505,7 +528,7 @@
     </div>
 
     <footer>
-        <p>© 2025 Kevin Green. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+        <p>© 2025 Kevin Green. All rights reserved. | <a href="still-privacy.html">Privacy Policy</a> | <a href="index.html">Back to Portfolio</a></p>
     </footer>
 
     <!-- Help Modal -->

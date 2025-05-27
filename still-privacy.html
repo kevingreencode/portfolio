@@ -70,6 +70,22 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Back to portfolio link */
+        .back-link {
+            margin-left: auto;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
         /* Main Content */
         .container {
             max-width: 800px;
@@ -176,6 +192,16 @@
             color: var(--text-dim);
         }
 
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .container {
@@ -188,6 +214,10 @@
             
             h3 {
                 font-size: 1.25rem;
+            }
+
+            .back-link {
+                font-size: 0.75rem;
             }
         }
 
@@ -220,6 +250,9 @@
         <div class="header-content">
             <div class="app-icon">💧</div>
             <h1>Still Privacy Policy</h1>
+            <a href="index.html" class="back-link">
+                <span>←</span> Back to Portfolio
+            </a>
         </div>
     </header>
 
@@ -321,7 +354,7 @@
         <p>By using Still, you agree to this Privacy Policy.</p>
 
         <footer>
-            <p>© 2025 Kevin Green. All rights reserved.</p>
+            <p>© 2025 Kevin Green. All rights reserved. | <a href="still-support.html">Support</a> | <a href="index.html">Back to Portfolio</a></p>
         </footer>
     </div>
 </body>
