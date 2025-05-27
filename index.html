@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -94,7 +95,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(35, 137, 218, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(79, 195, 247, 0.3) 0%, transparent 50%),
                 radial-gradient(circle at 40% 20%, rgba(41, 182, 246, 0.3) 0%, transparent 50%);
@@ -120,9 +121,17 @@
         }
 
         @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .subtitle {
@@ -296,29 +305,34 @@
         }
 
         /* Privacy Policy & Support Pages */
-        .privacy-content, .support-content {
+        .privacy-content,
+        .support-content {
             max-width: 800px;
             margin: 0 auto;
             line-height: 1.8;
         }
 
-        .privacy-content h3, .support-content h3 {
+        .privacy-content h3,
+        .support-content h3 {
             color: var(--primary);
             margin: 2rem 0 1rem;
         }
 
-        .privacy-content p, .support-content p {
+        .privacy-content p,
+        .support-content p {
             color: var(--text-dim);
             margin-bottom: 1rem;
         }
 
-        .privacy-content ul, .support-content ul {
+        .privacy-content ul,
+        .support-content ul {
             color: var(--text-dim);
             margin-left: 2rem;
             margin-bottom: 1rem;
         }
 
-        .privacy-content li, .support-content li {
+        .privacy-content li,
+        .support-content li {
             margin-bottom: 0.5rem;
         }
 
@@ -354,8 +368,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Still App Badge */
@@ -378,17 +399,18 @@
                 gap: 1rem;
                 font-size: 0.9rem;
             }
-            
+
             .hero-content {
                 padding: 0 1rem;
             }
-            
+
             section {
                 padding: 3rem 1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav>
@@ -424,10 +446,14 @@
             <div class="projects-grid">
                 <div class="project-card featured">
                     <h3>
-                        💧 Still
+                        <div class="app-icon">
+                            <img src="icon.png" alt="Still App Icon"
+                                style="width: 100%; height: 100%; border-radius: 12px;" />
+                        </div> Still
                         <span class="app-badge">iOS App</span>
                     </h3>
-                    <p>A minimalist hydration tracking app that respects your privacy. Track water intake, set goals, and get gentle reminders - all data stays on your device.</p>
+                    <p>A minimalist hydration tracking app that respects your privacy. Track water intake, set goals,
+                        and get gentle reminders - all data stays on your device.</p>
                     <div class="project-links">
                         <a href="#" onclick="showPage('still-support')">Support →</a>
                         <a href="#" onclick="showPage('still-privacy')">Privacy →</a>
@@ -435,7 +461,8 @@
                 </div>
                 <div class="project-card">
                     <h3>Project Name 2</h3>
-                    <p>Another awesome project description. Highlight the key features and your role in the development.</p>
+                    <p>Another awesome project description. Highlight the key features and your role in the development.
+                    </p>
                     <div class="project-links">
                         <a href="#">Live Demo →</a>
                         <a href="#">GitHub →</a>
@@ -443,7 +470,8 @@
                 </div>
                 <div class="project-card">
                     <h3>Project Name 3</h3>
-                    <p>Description of your third project. What makes it special? What did you learn while building it?</p>
+                    <p>Description of your third project. What makes it special? What did you learn while building it?
+                    </p>
                     <div class="project-links">
                         <a href="#">Live Demo →</a>
                         <a href="#">GitHub →</a>
@@ -491,38 +519,43 @@
             <h2>Still - Support</h2>
             <div class="support-content">
                 <p>Welcome to Still support! We're here to help you stay hydrated.</p>
-                
+
                 <h3>Frequently Asked Questions</h3>
-                
+
                 <div class="faq">
                     <h4>How do I change my daily water goal?</h4>
-                    <p>Go to Settings → Daily Water Goal. Enter your desired amount and tap "Save Goal". You can switch between ml and oz units anytime.</p>
+                    <p>Go to Settings → Daily Water Goal. Enter your desired amount and tap "Save Goal". You can switch
+                        between ml and oz units anytime.</p>
                 </div>
 
                 <div class="faq">
                     <h4>Why aren't my reminders working?</h4>
-                    <p>Make sure notifications are enabled in your device settings. On iOS: Settings → Still → Notifications. On Android, also check battery optimization settings.</p>
+                    <p>Make sure notifications are enabled in your device settings. On iOS: Settings → Still →
+                        Notifications. On Android, also check battery optimization settings.</p>
                 </div>
 
                 <div class="faq">
                     <h4>How do I customize reminder times?</h4>
-                    <p>In Settings → Reminders, you can set your active hours and reminder frequency. Still won't disturb you outside your active hours.</p>
+                    <p>In Settings → Reminders, you can set your active hours and reminder frequency. Still won't
+                        disturb you outside your active hours.</p>
                 </div>
 
                 <div class="faq">
                     <h4>Can I sync data between devices?</h4>
-                    <p>Still is privacy-focused - all data stays on your device. There's no cloud sync, which means your data is completely private.</p>
+                    <p>Still is privacy-focused - all data stays on your device. There's no cloud sync, which means your
+                        data is completely private.</p>
                 </div>
 
                 <div class="faq">
                     <h4>How do I delete my data?</h4>
-                    <p>You can clear all data in Settings (developer mode) or simply uninstall the app. No data is stored on any servers.</p>
+                    <p>You can clear all data in Settings (developer mode) or simply uninstall the app. No data is
+                        stored on any servers.</p>
                 </div>
 
                 <h3>Need More Help?</h3>
                 <p>If you have questions not answered here, please email us at:</p>
                 <p><strong>kevin.green@cosmosholo.com</strong></p>
-                
+
                 <h3>Report a Bug</h3>
                 <p>Found an issue? Please include these details when reporting:</p>
                 <ul>
@@ -545,10 +578,11 @@
             <h2>Privacy Policy for Still</h2>
             <div class="privacy-content">
                 <p><strong>Last Updated: May 2025</strong></p>
-                
+
                 <h3>Introduction</h3>
-                <p>Still ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our hydration tracking application.</p>
-                
+                <p>Still ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy
+                    explains how we handle information when you use our hydration tracking application.</p>
+
                 <h3>Information We Collect</h3>
                 <h4>Water Intake Data</h4>
                 <ul>
@@ -572,7 +606,7 @@
                     <li>First launch date</li>
                     <li>Notification permissions status</li>
                 </ul>
-                
+
                 <h3>How We Use Your Information</h3>
                 <p>All data is used solely to:</p>
                 <ul>
@@ -582,7 +616,7 @@
                     <li>Personalize your app experience</li>
                     <li>Determine appropriate timing for app store review requests</li>
                 </ul>
-                
+
                 <h3>Data Storage</h3>
                 <p><strong>All data is stored locally on your device only.</strong> We do not:</p>
                 <ul>
@@ -593,7 +627,7 @@
                     <li>Track your location</li>
                 </ul>
                 <p>Your data remains completely private and under your control.</p>
-                
+
                 <h3>Notifications</h3>
                 <p>If you enable reminders, Still will:</p>
                 <ul>
@@ -601,21 +635,24 @@
                     <li>Send hydration reminders at your chosen intervals</li>
                     <li>Only send notifications during the hours you specify</li>
                 </ul>
-                <p>Notifications are processed entirely on your device. No notification data is sent to external servers.</p>
-                
+                <p>Notifications are processed entirely on your device. No notification data is sent to external
+                    servers.</p>
+
                 <h3>Data Deletion</h3>
                 <p>You can delete all your data at any time by:</p>
                 <ul>
                     <li>Using the "Clear All Data" feature in Settings (Developer mode)</li>
                     <li>Uninstalling the app from your device</li>
                 </ul>
-                
+
                 <h3>Third-Party Services</h3>
-                <p>Still does not integrate with any third-party services, analytics platforms, or advertising networks.</p>
-                
+                <p>Still does not integrate with any third-party services, analytics platforms, or advertising networks.
+                </p>
+
                 <h3>Children's Privacy</h3>
-                <p>Still does not knowingly collect information from children under 13. The app is designed for general wellness purposes and should be used under appropriate supervision for minors.</p>
-                
+                <p>Still does not knowingly collect information from children under 13. The app is designed for general
+                    wellness purposes and should be used under appropriate supervision for minors.</p>
+
                 <h3>Your Rights</h3>
                 <p>You have the right to:</p>
                 <ul>
@@ -624,17 +661,18 @@
                     <li>Disable notifications</li>
                     <li>Use the app without providing any personal information</li>
                 </ul>
-                
+
                 <h3>Changes to This Policy</h3>
-                <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy.</p>
-                
+                <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last
+                    Updated" date at the top of this policy.</p>
+
                 <h3>Contact Us</h3>
                 <p>If you have questions or concerns about this Privacy Policy or the app, please contact:</p>
                 <p><strong>Email:</strong> kevin.green@cosmosholo.com</p>
-                
+
                 <h3>Consent</h3>
                 <p>By using Still, you agree to this Privacy Policy.</p>
-                
+
                 <p style="margin-top: 2rem;">
                     <a href="#" onclick="showPage('home')" style="color: var(--primary);">← Back to Home</a>
                 </p>
@@ -644,8 +682,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Kevin Green. All rights reserved. | 
-            <a href="#" onclick="showPage('still-privacy')" style="color: var(--primary);">Still Privacy Policy</a> | 
+        <p>&copy; 2025 Kevin Green. All rights reserved. |
+            <a href="#" onclick="showPage('still-privacy')" style="color: var(--primary);">Still Privacy Policy</a> |
             <a href="#" onclick="showPage('still-support')" style="color: var(--primary);">Still Support</a>
         </p>
     </footer>
@@ -657,10 +695,10 @@
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
             });
-            
+
             // Show selected page
             document.getElementById(pageId).classList.add('active');
-            
+
             // Scroll to section if specified
             if (sectionId) {
                 setTimeout(() => {
@@ -702,4 +740,5 @@
         });
     </script>
 </body>
+
 </html>
