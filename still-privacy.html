@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Still</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2389DA;
+            --primary-dark: #1976D2;
+            --secondary: #4FC3F7;
+            --bg: #0f172a;
+            --bg-light: #1e293b;
+            --text: #e2e8f0;
+            --text-dim: #94a3b8;
+            --accent: #29B6F6;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(35, 137, 218, 0.3);
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .last-updated {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid rgba(35, 137, 218, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            color: var(--accent);
+            margin: 1.5rem 0 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            color: var(--text-dim);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        /* Highlights */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(35, 137, 218, 0.1) 0%, transparent 100%);
+            border: 1px solid var(--primary);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .contact-email {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .contact-email:hover {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container > * {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .container > *:nth-child(1) { animation-delay: 0.1s; }
+        .container > *:nth-child(2) { animation-delay: 0.2s; }
+        .container > *:nth-child(3) { animation-delay: 0.3s; }
+        .container > *:nth-child(4) { animation-delay: 0.4s; }
+        .container > *:nth-child(5) { animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="app-icon">💧</div>
+            <h1>Still Privacy Policy</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <p class="last-updated"><strong>Last Updated: May 2025</strong></p>
+
+        <h2>Introduction</h2>
+        <p>Still ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our hydration tracking application.</p>
+
+        <h2>Information We Collect</h2>
+
+        <h3>Water Intake Data</h3>
+        <ul>
+            <li>Daily water consumption records</li>
+            <li>Time stamps of water intake entries</li>
+            <li>Hydration goals and achievements</li>
+        </ul>
+
+        <h3>App Preferences</h3>
+        <ul>
+            <li>Daily water intake goals</li>
+            <li>Preferred units (ml/oz)</li>
+            <li>Reminder settings and schedules</li>
+            <li>Theme preferences (light/dark mode)</li>
+            <li>Time format preferences (12/24 hour)</li>
+        </ul>
+
+        <h3>Device Information</h3>
+        <ul>
+            <li>App launch count (for review prompts)</li>
+            <li>First launch date</li>
+            <li>Notification permissions status</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>All data is used solely to:</p>
+        <ul>
+            <li>Track your hydration progress</li>
+            <li>Display your consumption statistics</li>
+            <li>Send reminder notifications (if enabled)</li>
+            <li>Personalize your app experience</li>
+            <li>Determine appropriate timing for app store review requests</li>
+        </ul>
+
+        <h2>Data Storage</h2>
+        <div class="highlight-box">
+            <p><strong>All data is stored locally on your device only.</strong> We do not:</p>
+            <ul>
+                <li>Upload your data to any servers</li>
+                <li>Share your data with third parties</li>
+                <li>Use cloud storage services</li>
+                <li>Collect analytics or usage data</li>
+                <li>Track your location</li>
+            </ul>
+            <p>Your data remains completely private and under your control.</p>
+        </div>
+
+        <h2>Notifications</h2>
+        <p>If you enable reminders, Still will:</p>
+        <ul>
+            <li>Schedule local notifications on your device</li>
+            <li>Send hydration reminders at your chosen intervals</li>
+            <li>Only during the hours you specify</li>
+        </ul>
+        <p>Notifications are processed entirely on your device. No notification data is sent to external servers.</p>
+
+        <h2>Data Deletion</h2>
+        <p>You can delete all your data at any time by:</p>
+        <ul>
+            <li>Using the "Clear All Data" feature in Settings (Developer mode)</li>
+            <li>Uninstalling the app from your device</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>Still does not integrate with any third-party services, analytics platforms, or advertising networks.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Still does not knowingly collect information from children under 13. The app is designed for general wellness purposes and should be used under appropriate supervision for minors.</p>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access all data stored by the app</li>
+            <li>Delete your data at any time</li>
+            <li>Disable notifications</li>
+            <li>Use the app without providing any personal information</li>
+        </ul>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this policy.</p>
+
+        <h2>Contact Us</h2>
+        <div class="contact-section">
+            <p>If you have questions or concerns about this Privacy Policy or the app, please contact:</p>
+            <p><strong>Email:</strong> <a href="mailto:kevin.green@cosmosholo.com" class="contact-email">kevin.green@cosmosholo.com</a></p>
+        </div>
+
+        <h2>Consent</h2>
+        <p>By using Still, you agree to this Privacy Policy.</p>
+
+        <footer>
+            <p>© 2025 Kevin Green. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
