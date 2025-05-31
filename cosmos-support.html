@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>Support - Cosmos Holo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6B46C1;
+            --primary-light: rgba(107, 70, 193, 0.1);
+            --primary-border: rgba(107, 70, 193, 0.3);
+            --secondary: #8B5CF6;
+            --bg: #0f0a1a;
+            --bg-light: #1a1329;
+            --text: #e2e8f0;
+            --text-secondary: #94a3b8;
+            --text-dim: #64748b;
+            --accent: #A855F7;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --success: #22c55e;
+            --border-light: rgba(139, 92, 246, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Back to portfolio link */
+        .back-link {
+            margin-left: auto;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Section */
+        .section {
+            background: var(--bg-light);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-light);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Help Button */
+        .help-button {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            border: 1px solid var(--primary-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .help-button:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Helper Text */
+        .helper-text {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Support Options */
+        .support-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 1px;
+            background: rgba(139, 92, 246, 0.02);
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid transparent;
+        }
+
+        .support-option:hover {
+            background: rgba(139, 92, 246, 0.05);
+            border-color: var(--primary-border);
+            transform: translateX(4px);
+        }
+
+        .support-option:not(:last-of-type) {
+            border-bottom: 1px solid var(--border-light);
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .support-option:last-of-type {
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+
+        .option-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.75rem;
+            color: var(--primary);
+        }
+
+        .option-content {
+            flex: 1;
+        }
+
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .option-description {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .option-arrow {
+            width: 16px;
+            height: 16px;
+            color: var(--text-dim);
+            transition: transform 0.3s;
+        }
+
+        .support-option:hover .option-arrow {
+            transform: translateX(4px);
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            border-bottom: 1px solid var(--border-light);
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Quick Actions */
+        .quick-action {
+            background: var(--primary-light);
+            border: 1px solid var(--primary-border);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .quick-action:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .quick-action-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 auto 0.5rem;
+        }
+
+        .quick-action-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .quick-action-description {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-light);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="app-icon">
+                🌌
+            </div>
+            <h1>Support - Cosmos Holo</h1>
+            <a href="index.html" class="back-link">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Quick Actions -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h2 class="section-title">Quick Actions</h2>
+                </div>
+            </div>
+            <p class="helper-text">Get help fast with these common actions</p>
+            
+            <a href="mailto:support@cosmosholo.com?subject=Cosmos%20Holo%20Support" class="quick-action">
+                <svg class="quick-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <div class="quick-action-title">Email Support</div>
+                <div class="quick-action-description">Get help from our team</div>
+            </a>
+
+            <a href="cosmos-privacy.html" class="quick-action">
+                <svg class="quick-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <div class="quick-action-title">Privacy Policy</div>
+                <div class="quick-action-description">Review our privacy practices</div>
+            </a>
+        </div>
+
+        <!-- Contact Support -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                    </svg>
+                    <h2 class="section-title">Contact Support</h2>
+                </div>
+            </div>
+            <p class="helper-text">Choose how you'd like to get in touch</p>
+            
+            <a href="mailto:support@cosmosholo.com?subject=Cosmos%20Holo%20Bug%20Report" class="support-option">
+                <svg class="option-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.934-.833-2.464 0L4.35 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+                <div class="option-content">
+                    <div class="option-title">Report a Bug</div>
+                    <div class="option-description">Found an issue? Let us know so we can fix it</div>
+                </div>
+                <svg class="option-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <a href="mailto:support@cosmosholo.com?subject=Cosmos%20Holo%20Feature%20Request" class="support-option">
+                <svg class="option-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+                <div class="option-content">
+                    <div class="option-title">Request a Feature</div>
+                    <div class="option-description">Have an idea? We'd love to hear it</div>
+                </div>
+                <svg class="option-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+
+            <a href="mailto:support@cosmosholo.com?subject=Cosmos%20Holo%20General%20Support" class="support-option">
+                <svg class="option-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="option-content">
+                    <div class="option-title">General Support</div>
+                    <div class="option-description">Need help with something else? Ask us</div>
+                </div>
+                <svg class="option-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </a>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How does Cosmos Holo analyze card centering?</div>
+                <div class="faq-answer">Cosmos Holo uses advanced computer vision algorithms to detect card edges and calculate precise centering measurements. All analysis happens locally on your device for privacy.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Is my card data stored in the cloud?</div>
+                <div class="faq-answer">No, all your card images and analysis data are stored locally on your device. We never upload your cards to our servers, ensuring complete privacy.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How accurate are the centering measurements?</div>
+                <div class="faq-answer">Our algorithm provides sub-millimeter accuracy for centering analysis. Results may vary based on image quality and lighting conditions.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Can I export my analysis results?</div>
+                <div class="faq-answer">Yes, you can save analysis results with custom names and export them for your records or grading submissions.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do I cancel my subscription?</div>
+                <div class="faq-answer">You can cancel your subscription anytime through your device's App Store or Google Play Store subscription settings. Your access continues until the current billing period ends.</div>
+            </div>
+        </div>
+
+        <!-- App Info -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-title-wrapper">
+                    <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h2 class="section-title">App Information</h2>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Version</div>
+                <div class="faq-answer">Check your app store for the latest version information</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Compatibility</div>
+                <div class="faq-answer">iOS 15.0+ and Android 8.0+ devices</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Developer</div>
+                <div class="faq-answer">Kevin Green - <a href="mailto:kevin.green@cosmosholo.com" style="color: var(--primary);">kevin.green@cosmosholo.com</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cosmos Holo. All rights reserved. |
+            <a href="cosmos-privacy.html">Privacy Policy</a> |
+            <a href="index.html">Portfolio</a>
+        </p>
+    </footer>
+</body>
+</html>

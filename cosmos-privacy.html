@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png" />
+    <title>Privacy Policy - Cosmos Holo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6B46C1;
+            --primary-dark: #553C9A;
+            --secondary: #8B5CF6;
+            --bg: #0f0a1a;
+            --bg-light: #1a1329;
+            --text: #e2e8f0;
+            --text-dim: #94a3b8;
+            --accent: #A855F7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(15, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(107, 70, 193, 0.3);
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Back to portfolio link */
+        .back-link {
+            margin-left: auto;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .last-updated {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 3rem 0 1.5rem;
+            font-size: 2rem;
+            border-bottom: 2px solid rgba(107, 70, 193, 0.3);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: var(--secondary);
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            color: var(--accent);
+            margin: 1.5rem 0 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        p {
+            color: var(--text-dim);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            color: var(--text-dim);
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: -1.5rem;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        /* Highlights */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(107, 70, 193, 0.1) 0%, transparent 100%);
+            border: 1px solid var(--primary);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: var(--text);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--bg-light);
+            border-radius: 0.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(139, 92, 246, 0.1);
+            text-align: center;
+        }
+
+        .contact-email {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .contact-email:hover {
+            color: var(--secondary);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            text-align: center;
+            color: var(--text-dim);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--secondary);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .back-link {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="app-icon">
+                🌌
+            </div>
+            <h1>Privacy Policy - Cosmos Holo</h1>
+            <a href="index.html" class="back-link">
+                ← Back to Portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="last-updated">
+            Effective Date: May 30th, 2025
+        </div>
+
+        <h2>Introduction</h2>
+        <p>Cosmos Holo ("we," "our," or "us") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.</p>
+
+        <h2>Information We Collect</h2>
+
+        <h3>Information You Provide</h3>
+        <ul>
+            <li><strong>Images:</strong> Card images you upload for analysis (stored locally on your device only)</li>
+            <li><strong>Card Names:</strong> Optional names you provide when saving analyses</li>
+            <li><strong>Account Information:</strong> Email address for subscription management (handled by RevenueCat)</li>
+        </ul>
+
+        <h3>Automatically Collected Information</h3>
+        <ul>
+            <li><strong>Usage Data:</strong> App usage statistics and crash reports (anonymized)</li>
+            <li><strong>Device Information:</strong> Device type, operating system version</li>
+            <li><strong>Subscription Status:</strong> Managed by RevenueCat for billing purposes</li>
+        </ul>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+            <li>Provide card centering analysis services</li>
+            <li>Process subscription payments through RevenueCat</li>
+            <li>Improve app functionality and user experience</li>
+            <li>Provide customer support</li>
+        </ul>
+
+        <h2>Data Storage and Security</h2>
+        <div class="highlight-box">
+            <p><strong>Privacy First:</strong> All card images and analysis data are stored locally on your device. We do not upload or store your card images on our servers.</p>
+        </div>
+        
+        <ul>
+            <li><strong>Local Storage:</strong> All card images and analysis data are stored locally on your device</li>
+            <li><strong>No Cloud Storage:</strong> We do not upload or store your card images on our servers</li>
+            <li><strong>Subscription Data:</strong> Subscription information is securely managed by RevenueCat</li>
+            <li><strong>Security:</strong> We implement industry-standard security measures to protect your data</li>
+        </ul>
+
+        <h2>Information Sharing</h2>
+        <p>We do not sell, trade, or share your personal information with third parties, except:</p>
+        <ul>
+            <li><strong>RevenueCat:</strong> For subscription management and payment processing</li>
+            <li><strong>Apple/Google:</strong> For app distribution and payment processing</li>
+            <li><strong>Legal Requirements:</strong> When required by law or to protect our legal rights</li>
+        </ul>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li>Access your personal information</li>
+            <li>Correct inaccurate information</li>
+            <li>Delete your data (uninstall the app to remove local data)</li>
+            <li>Cancel your subscription at any time</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>Our app is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the app and updating the "Effective Date."</p>
+
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <a href="mailto:privacy@cosmosholo.com" class="contact-email">privacy@cosmosholo.com</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Cosmos Holo. All rights reserved. |
+            <a href="cosmos-support.html">Support</a> |
+            <a href="index.html">Portfolio</a>
+        </p>
+    </footer>
+</body>
+</html>
